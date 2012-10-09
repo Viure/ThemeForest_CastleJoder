@@ -1,0 +1,43 @@
+
+body{ background:#00ff00;}
+ul{ margin:0px; padding:0px; list-style:none;}
+.clearfix:before,.clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+.wrapper { margin: 0 auto; }
+
+#logo{ float:left;}
+
+nav{ display:inline-block; float:right;}
+nav ul {}
+nav ul li{ display:inline-block; width:100px; float:right; padding:20px; background:#C60; text-align:center; }
+nav ul li:hover{ background:#960;}
+
+
+
+
+
+/* ==========================================================================
+Media Queries
+========================================================================== */
+@media only screen and (min-width: 480px) {
+body{ background:#000;}
+.wrapper{ width:100%; display:block;}
+
+nav ul { display:block; width:100%; clear:both;}
+nav ul li{  display:block; }
+
+}
+
+@media only screen and (min-width: 768px) {
+body{ background:#666;}
+.wrapper{width:768px;}
+}
+
+@media only screen and (min-width: 960px) {
+body{ background:#ccc;}
+.wrapper{width:960px;}
+}
+
+

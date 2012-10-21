@@ -97,7 +97,7 @@ header nav .selectnav option:hover{ text-shadow:none; filter:none;}
 
 /*twocolumns*/
 .two-column article:first-child{ margin-bottom:20px; }
-
+/*.two-column > *{ margin-bottom:80px; }*/
 
 /*threecolumns*/
 .three-column article{margin-bottom:20px;}

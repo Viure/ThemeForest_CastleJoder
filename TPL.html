@@ -11,18 +11,16 @@
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="favicon.ico">
-        <!--<link rel="stylesheet" href="css/normalize.min.css">-->
+        <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/flexslider.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        
+        <link rel="stylesheet" href="css/main.css">      
     </head>
     <body>
     	<!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
             <header>
-                <div class="wrapper">
+                <div class="wrapper clearfix">
                     <a href="">
                     	<!--insert here your logotype-->
                         <img id="logo" src="css/img/logo.png"/>
@@ -31,35 +29,65 @@
                         <!--Secctions menu for phone-->
                         <select class="selectnav">
                         	<option value="index.html">Home</option>
-                        	<option value="index.html"> - Home1</option>
-                        	<option value="index.html"> - Home2</option>
-                            <option value="index.html"> - Home3</option>
+                        	<option value="index.html"> &&rarr; Home Slide 1</option>
+                        	<option value="index.html"> &rarr; Home Slide 2</option>
+                            <option value="index.html"> &rarr; Home Video</option>
                             <option value="index.html">Features</option>
+                            <option value="index.html"> &rarr; Columns</option>
+                            <option value="index.html"> &rarr; Controls</option>
+                            <option value="index.html"> &rarr; 404 page</option>
                             <option value="index.html">About Us</option>
                             <option value="index.html">Team</option>
                             <option value="index.html">Prices</option>
+                            <option value="index.html"> &rarr; Prices 1</option>
+                            <option value="index.html"> &rarr; Prices 2</option>
                             <option value="index.html">Portfolio</option>
+                            <option value="index.html"> &rarr; Individual</option>
+                            <option value="index.html"> &rarr; 2 Columns</option>
+                            <option value="index.html"> &rarr; 3 Columns</option>
+                            <option value="index.html"> &rarr; 4 Columns</option>
+                            <option value="index.html"> &rarr; Widgets</option>
+                            <option value="index.html"> &rarr; Videos</option>
                             <option value="index.html">Contact</option>
                         </select>
                         <ul>
                         	<!--Secctions menu for tab and pc-->
                             <li><a href="#">Home</a>
                             	<ul>
-                                	<li><a href="#">Home1</a></li>
-                                	<li><a href="#">Home2</a></li>
-                                    <li><a href="#">Home3</a></li>
+                                	<li><a href="#">Home Slide 1</a></li>
+                                	<li><a href="#">Home Slide 2</a></li>
+                                    <li><a href="#">Home Video</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Features</a>
+                            	<ul>
+                                	<li><a href="#">Columns</a></li>
+                                	<li><a href="#">404 page</a></li>
+                                    <li><a href="#">Controls</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Team</a></li>
-                            <li><a href="#">Prices</a></li>
-                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Prices</a>
+								<ul>
+                                	<li><a href="#">Prices 1</a></li>
+                                	<li><a href="#">Prices 2</a></li>                            
+                            	</ul>
+                            </li>
+                            <li><a href="#">Portfolio</a>
+                            	<ul>
+                                	<li><a href="#">Individual</a></li>
+                                	<li><a href="#">2 Columns</a></li>
+                                    <li><a href="#">3 Columns</a></li>
+                                    <li><a href="#">4 Columns</a></li>
+                                    <li><a href="#">Widgets</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                </ul>                            
+                            </li>
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
-            	<div class="clear"></div>
             </header>
 			<div id="pagetitle">
                 <div  class="wrapper">
@@ -68,7 +96,6 @@
                     <span id="breadcrumb"><a href="#">Home</a> | <a href="#">Features</a></span>
                 </div>
             </div>
-
 			<div id="content">
                 <div  class="wrapper">
                 	<!--subtitle style1-->
@@ -99,7 +126,7 @@
                     <!--subtitle style1-->
 					<h2 class="subtitle001">Capitalize</h2>
                     <!--capitalize style1-->
-                	<div class="four-column">
+                	<div class="four-column clearfix">
                         <article class="capitalize001">
                             Nisl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Nisl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
                         </article>
@@ -114,12 +141,11 @@
                             Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
                         </article>
 					</div>
-                    <div class="clear"></div>
 
 					<!--subtitle style1-->
                     <h2 class="subtitle001">One column</h2>
                     <!--three columns-->
-                	<div class="one-column">
+                	<div class="one-column  clearfix">
                         <article>
                             <h3>Column 1</h3>
                             Isl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Isl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
@@ -132,7 +158,7 @@
                     <!--subtitle style1-->
                     <h2 class="subtitle001">Two columns 2/3</h2>
                     <!--Two columns-->
-                	<div class="two2-3-column">
+                	<div class="two2-3-column  clearfix">
                         <article>
                             <h3>Column 1</h3>
                             Isl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Isl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
@@ -143,12 +169,11 @@
                             Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
                         </article>
 					</div>
-                    <div class="clear"></div>                    
                     
                     <!--subtitle style1-->
                     <h2 class="subtitle001">Two columns</h2>
                     <!--Two columns-->
-                	<div class="two-column">
+                	<div class="two-column  clearfix">
                         <article>
                             <h3>Column 1</h3>
                             <h4>Subtitle column 1</h4>
@@ -160,12 +185,11 @@
                             Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
                         </article>
 					</div>
-                    <div class="clear"></div>
                     
 					<!--subtitle style1-->
                     <h2 class="subtitle001">Three columns</h2>
                     <!--three columns-->
-                	<div class="three-column">
+                	<div class="three-column  clearfix">
                         <article>
                             <h3>Column 1</h3>
                             Isl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Isl a tempor iaculis, nunc odio pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
@@ -178,13 +202,12 @@
                         	<h3>Column 3</h3>
                             Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
                         </article>
-					</div>
-                    <div class="clear"></div>                  
+					</div>               
   
 					<!--subtitle style1-->
                     <h2 class="subtitle001">Four columns</h2>
                     <!--four columns-->
-                	<div class="four-column">
+                	<div class="four-column  clearfix">
                         <article>
                             <h3>Column 1</h3>
                             <h4>Subtitle colum 1</h4>
@@ -206,21 +229,19 @@
                             <h4>Subtitle colum 4</h4>
                             Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam. Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit amet quam.
                         </article>
-                    </div>
-                    <div class="clear"></div>                    
+                    </div>                  
                
                     <!--slogans-->
                     <h2 class="subtitle001">Slogans</h2>                
-                	<div class="one-column">
+                	<div class="one-column clearfix">
                         <article>
                             <div class="slogan001">
                             	Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit arcu vitae accumsan semper. Vivamus feugiat, arcu.
-                            
                             </div>
                         </article>
 					</div>
                     <div class="spacer"></div>
-                    <div class="one-column">
+                    <div class="one-column clearfix">
                         <article>
                             <div class="slogan002">
                             	Pellentesque velit, in vulputate libero sem id ligula. Vivamus feugiat, arcu vitae accumsan semper, arcu urna dictum orci, sit amet fermentum sem libero sit arcu vitae accumsan semper. Vivamus feugiat, arcu.
@@ -228,7 +249,7 @@
                         </article>
 					</div>
                     <div class="spacer"></div>
-                	<div class="two-column">
+                	<div class="two-column  clearfix">
                         <article>
                             <div class="slogan001">
                                 Pellentesque velit, in vulputate libero sem id ligula feugiat, arcu vitae accumsan vitae.
@@ -240,19 +261,12 @@
                             	Pellentesque velit, in vulputate libero sem id ligula feugiat, arcu vitae accumsan vitae.
                             </div>
                         </article>
-						<div class="clear"></div>
                     </div>                    
-       				
-                    
                     
 					
                     <!--controls-->
                     <h2 class="subtitle001">Custom controls</h2>
-                	<div class="three-column">
-                        
-                        
-                        
-                        
+                	<div class="three-column clearfix">
                         <article>
                             <h3>Progress bar</h3>
                             <div class="progressbar001" data-pbpercent="60">
@@ -323,9 +337,9 @@
                             </ul>
                         </article>
                     </div>
-                    <div class="clear spacer"></div>                    
+                    <div class="spacer"></div>                    
                     
-                	<div class="two-column">
+                	<div class="two-column clearfix">
                         <article>
                             <h3>Acordeon</h3>
                             <!--acordeon-->
@@ -366,15 +380,8 @@
                                     <p class="contab4">4. Duis ac erat purus, a hendrerit ligula. Vivamus tellus ante, facilisis id rutrum ac, dapibus eu felis. Duis vehicula purus turpis, in pharetra mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut tempus felis. Sed sollicitudin dolor in leo consequat ut convallis mi fringilla. 
                                 </div>
                             </div>
-
-
-
-
-
                         </article>
 					</div>
-                    <div class="clear"></div>
-                    
                 </div>
             </div>
         <footer>

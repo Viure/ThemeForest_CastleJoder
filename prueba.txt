@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-TE vas a cagar con los cambios.
-=======
-hago un cambio en prueba - Jorge
->>>>>>> 1c1bac7c2cd3b99f1f1795070032cd165e2505e8

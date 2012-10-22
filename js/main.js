@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-=======
-// If JavaScript is enabled remove 'no-js' class and give 'js' class
-jQuery('html').removeClass('no-js').addClass('js');
+// If JavaScript is enabled remove 'no-js' class and give 'js' classjQuery('html').removeClass('no-js').addClass('js');
 
 // When DOM is fully loaded
 jQuery(document).ready(function($) {
 
->>>>>>> b4f541d3157c46b88d13b0471fff255dd9ba3f4f
-// $(function(){
-//      SyntaxHighlighter.all();
+// $(function(){//      SyntaxHighlighter.all();
 //    });
 //    $(window).load(function(){
 //      $('.flexslider').flexslider({

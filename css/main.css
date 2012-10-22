@@ -82,19 +82,22 @@ header nav .selectnav option:hover{ text-shadow:none; filter:none;}
 /*Content Elements ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*onecolumns*/
-.one-column article{}
+.one-column article> *{ text-align:justify;}
 
-/*twocolumns*/.two-column > *:first-child{ margin-bottom:20px; }
+/*twocolumns*/
+.two-column > *{ text-align:justify;}
+.two-column > *:first-child{ margin-bottom:20px; }
 
 /*two2-3-column*/
+.two2-3-column > *{ text-align:justify;}
 .two2-3-column > *:first-child{ margin-bottom:20px; }
 
 /*threecolumns*/
-.three-column > *{margin-bottom:20px;}
+.three-column > *{margin-bottom:20px; text-align:justify;}
 .three-column > *:last-child{margin-bottom:0px;}
 
 /*fourcolumns*/
-.four-column > *{ margin-bottom:20px; }
+.four-column > *{ margin-bottom:20px; text-align:justify; }
 .four-column > *:last-child{ margin-bottom:0px; }
 
 /*article titles*/

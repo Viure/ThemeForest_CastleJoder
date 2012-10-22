@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+// If JavaScript is enabled remove 'no-js' class and give 'js' class
+jQuery('html').removeClass('no-js').addClass('js');
+
+// When DOM is fully loaded
+jQuery(document).ready(function($) {
+
+>>>>>>> b4f541d3157c46b88d13b0471fff255dd9ba3f4f
 // $(function(){
 //      SyntaxHighlighter.all();
 //    });
@@ -69,3 +78,91 @@ var _gaq = _gaq || [];
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
  })();
+
+
+
+
+ /* ---------------------------------------------------------------------- */
+	/*	MAP GOOGLE   - GMAP 3  ;-)
+	/* ---------------------------------------------------------------------- */
+
+	(function() {
+
+		//styles for gmap3 - you can customize your own style in  http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+		var mstyle = [ { featureType: 'administrative', elementType: 'all', stylers: [ { visibility: 'on' } ] },{ featureType: 'landscape', elementType: 'all', stylers: [ { hue: '#007fff' }, { saturation: -31 }, { lightness: 0 } ] },{ featureType: 'road', elementType: 'labels', stylers: [ { visibility: 'on' }, { saturation: 98 }, { lightness: 0 }, { hue: '#0088ff' } ] },{ featureType: 'water', elementType: 'all', stylers: [ { visibility: 'on' }, { hue: '#00a1ff' }, { saturation: -31 } ] },{ featureType: 'landscape.natural', elementType: 'all', stylers: [ { visibility: 'on' }, { hue: '#007fff' }, { saturation: -31 } ] },{ featureType: 'poi.park', elementType: 'all', stylers: [ { visibility: 'on' }, { saturation: -47 }, { hue: '#00ffe6' } ] },{ featureType: 'road.highway', elementType: 'geometry', stylers: [ { visibility: 'on' }, { hue: '#ff6e00' } ] },{ featureType: 'road.arterial', elementType: 'geometry', stylers: [ { visibility: 'on' }, { saturation: -44 }, { hue: '#ffb300' }, { lightness: 74 } ] },{ featureType: 'road.local', elementType: 'all', stylers: [ { visibility: 'on' }, { hue: '#00bbff' } ] },{ featureType: 'all', elementType: 'all', stylers: [ ] } ];
+		
+			
+		
+		var $map = $('#map');
+		
+		if( $map.length ) {
+			
+			$map.gmap3(
+			// Add a style without create the map
+				
+					// create a new style and active it after having created the map
+					{ action: 'setStyledMap',
+						// implicit init - - - - -
+						map:{
+						center:{
+						lat:41.850033,
+						lng:-87.650052
+						},
+						zoom:12,
+						mapTypeId: google.maps.MapTypeId.ROADMAP,
+						mapTypeControlOptions: {
+						mapTypeIds: []
+						}
+					},
+					// - - - - - - - - - - - -
+						styledmap:{
+						id: 'style1',
+						style: mstyle,
+						options:{
+						name: 'Style 1'
+						}
+						}
+					}
+			);
+			
+			
+					$map.gmap3(
+						{ action: 'addMarker',
+						address: "Haltern am See, Weseler Str. 151",
+							marker:{
+								options:{
+								icon:'android.png' //Path to the image
+								}
+							}
+						}
+					);
+					
+					//animate Bounce  marker
+					function startDance() {
+						var i, markers = $("#map").gmap3({action:'get', name:'marker', all:true});
+						for (i in markers) {
+							(function(m, i){
+								setTimeout(function() {
+									m.setAnimation(google.maps.Animation.BOUNCE);
+								}, i * 200);
+							})(markers[i], i);
+						}
+					}
+
+			$map.gmap3({action: 'setStyledMap', id: 'style1',callback: function(){
+			startDance();
+			}});
+			
+			
+			
+			
+		}		
+
+	})();
+
+	/* end MAP GOOGLE   - GMAP 3 */
+
+
+
+
+});

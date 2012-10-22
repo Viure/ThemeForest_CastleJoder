@@ -8,6 +8,7 @@ h1,h2,h3,h4{ font-weight:normal;}
 
 /*dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,article,p { margin-bottom: 20px; }*/
 
+ html,body{width:100%;height:100%}
 /*Fonts ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 @font-face {
@@ -185,6 +186,9 @@ h4.style001{ font-size:15px; color:#67b600;margin-bottom:10px;  line-height:18px
 }
 .contentabs p:first-child{ display:block;}
 
+/* Map */
+
+#map{width:100%;height:100%}
 /*Footer ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 footer{background:#58585a; border-top:32px solid #67b700;}

@@ -184,8 +184,16 @@ h4.style001{ font-size:15px; color:#67b600;margin-bottom:10px;  line-height:18px
 }
 .contentabs p:first-child{ display:block;}
 
-/*pager*/
-
+/*pagination*/
+.pagination li{ display:inline; float:left;  }
+.pagination li a{ padding:2px 7px; font-size:16px; font-weight:bold; color:#a4a4a4; border-right:1px solid #a4a4a4;}
+.pagination li:last-child a{ border:0;}
+.pagination li:hover a{ color:#67b600;}
+.pagination li.selected a{ background:#67b600; color:#FFF;}
+.pagination li.navprev{ background:url(icos/paginationprev.png) center;}
+.pagination li.navnext{ background:url(icos/paginationnext.png) center;}
+.pagination li.navprev:hover{ background:url(icos/paginationprevhover.png) center;}
+.pagination li.navnext:hover{ background:url(icos/paginationnexthover.png) center;}
 
 
 /* Map */

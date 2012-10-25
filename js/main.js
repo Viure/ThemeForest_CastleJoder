@@ -91,7 +91,7 @@ var _gaq = _gaq || [];
 		var $map = $('#map');
 		
 		if( $map.length ) {
-			
+		
 			$map.gmap3(
 			// Add a style without create the map
 				
@@ -100,10 +100,10 @@ var _gaq = _gaq || [];
 						// implicit init - - - - -
 						map:{
 						center:{
-						lat:41.850033,
-						lng:-87.650052
+						lat:42.156529,
+						lng:-0.427346
 						},
-						zoom:12,
+						zoom:13,
 						mapTypeId: google.maps.MapTypeId.ROADMAP,
 						mapTypeControlOptions: {
 						mapTypeIds: []
@@ -123,14 +123,27 @@ var _gaq = _gaq || [];
 			
 					$map.gmap3(
 						{ action: 'addMarker',
-						address: "Haltern am See, Weseler Str. 151",
+						address: "Avd, Pirineos 15, Huesca, España",
 							marker:{
 								options:{
-								icon:'android.png' //Path to the image
+								icon:'marker.png' //Path to the image
+								},
+								events:{
+									click: function(marker, event, data){
+										var options = {};
+										$("#localization1").effect( "slide", options, 500, callback );
+									}
 								}
 							}
 						}
 					);
+					
+					 // callback function to bring a hidden box back
+					function callback() {
+						setTimeout(function() {
+							$( this ).removeAttr( "style" ).hide().fadeIn();
+						}, 1000 );
+					};
 					
 					//animate Bounce  marker
 					function startDance() {
@@ -157,7 +170,48 @@ var _gaq = _gaq || [];
 
 	/* end MAP GOOGLE   - GMAP 3 */
 
+	
+		/* ---------------------------------------------------------------------- */
+	/*	PHP Widgets
+	/* ---------------------------------------------------------------------- */
 
+	(function() {
+
+		function fetchFeed( url, element ) {
+
+			element.html('<img src="img/loader.gif" height="11" width="16" alt="Loading..." />');
+			
+			$.ajax({
+				url: url,
+				dataType: 'html',
+				timeout: 10000,
+				type: 'GET',
+				error:
+					function( xhr, status, error ) {
+						element.html( 'An error occured: ' + error );
+					},
+				success:
+					function( data, status, xhr ) {
+						element.html( data );
+					}
+			});
+			
+		}
+				
+		// Latest Tweets
+		var $tweetsContainer = $('.tweets-feed');
+		if( $tweetsContainer.length )
+			fetchFeed( 'php/tweets.php', $tweetsContainer );
+
+		// Latest Flickr Images
+		var $flickrContainer = $('.flickr-feed');
+		if( $flickrContainer.length )
+			fetchFeed( 'php/flickr.php', $flickrContainer );
+
+	})();
+		
+	/* end PHP Widgets */
+	
 
 
 });

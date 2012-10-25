@@ -36,14 +36,23 @@ font-family: 'LucidaBlackletter';
 
 header{background:#000000;  box-shadow: 0px 0px 20px 0px #000; position:relative; z-index:10; padding:20px;}
 header #logo{ margin:0 auto; display:block; float:none;}
+
+/*Main menu*/
+/*Lebel 1*/
 header nav ul { display:none; }
 header nav ul li{ line-height:47px; display:inline-block;}
-header nav a {display: block; padding: 0px 15px; text-align: center;text-decoration: none; color: white; font-size:14px;}header nav li:hover{color: white; background:#67b700; }
-
-header nav ul li ul{ position:absolute; width:150px; padding:5px; background:#666; opacity:0; top:-100px; z-index:-10; margin-left:-20px; -webkit-box-shadow: 0px 0px 5px 0px #000; box-shadow: 0px 0px 5px 0px #000; }
-header nav ul li ul li{  display:block; line-height:25px;}
-header nav ul li ul li a{ text-align:left;}
-header nav ul li ul li:hover{ background:#999;-webkit-box-shadow: none; box-shadow: none; }
+header nav a {display: block; padding: 0px 15px; color: #ffffff; font-size:14px;}
+header nav > ul > li:hover{color: white; background:#67b700; }
+header nav ul li.selected{ background:#67b700;}
+/*Lebel 2*/
+header nav ul ul{ text-align:left; min-width:150px; border-top:4px solid #67b700; position:absolute;  padding:5px; background:#2d2d2d; opacity:0; top:-100px; z-index:-10; margin-left:-20px; -webkit-box-shadow: 0px 0px 5px 0px #000; box-shadow: 0px 0px 5px 0px #000; }
+header nav ul ul li{ border-bottom:#3f3f3f 1px solid;  display:block; line-height:30px;}
+header nav ul ul li:hover > a{ color:#67b700;}
+header nav ul ul li:hover ul{ opacity:1 !important;}
+header nav ul ul li.selected{ background:#3f3f3f;}
+/*Lebel 3*/
+header nav ul ul ul{ opacity:0 !important; border:0; margin-left:155px; }
+header nav ul ul ul li.selected{ background:#3f3f3f;}
 
 header nav .selectnav{ height:30px;  padding:5px 7px; line-height:20px; color:#999; border:1px solid #999; background:#ededed; font-size:14px;  width:300px; display:block; margin:20px auto;text-shadow: 1px 1px 0px #fff; filter: dropshadow(color=#fff, offx=1, offy=1);  }
 header nav .selectnav option{ padding:5px 7px;}
@@ -61,6 +70,22 @@ header nav .selectnav option:hover{ text-shadow:none; filter:none;}
 
 /*Content ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #content{ min-height:300px; padding:30px 0px;}
+
+/*404 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*default*/
+.error404{ background:#67b700; min-height:100% !important; position:fixed; width:100%; color:#fff}
+.error404 .wrapper{ margin-top:50px;}
+.error404 h1{ font-size:72px; font-weight:bold;}
+.error404 p{ font-size:50px;}
+.error404 span:first-child{font-size:300px; font-weight:bold; opacity:0.2; position:absolute; font-weight:bold; line-height:280px; text-align:right; width:inherit;}
+.error404 span:last-child{ font-size:35px; float:right;}
+/*style1*/
+.error404.style1{ background:url(../img/404/404_1.jpg) no-repeat center top #000000; min-height:100% !important; position:fixed; width:100%; color:#fff}
+/*style2*/
+.error404.style2{ background:url(../img/404/404_2.jpg) no-repeat center top #000000; min-height:100% !important; position:fixed; width:100%; color:#fff}
+
+
+
 /*Content Elements ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*onecolumns*/
@@ -112,10 +137,10 @@ h4.style001{ font-size:15px; color:#67b600;margin-bottom:10px;  line-height:18px
 .capitalize002:first-letter{ font-size:30px; float:left; padding:6px; margin-right:5px; color:#fff; background:#67b600; font-family:'LucidaBlackletter'; text-shadow: -1px -1px 0px #333;}
 
 .capitalize003{ color:#58585a;  margin:0 auto;}
-.capitalize003:first-letter{ font-size:44px; float:left; padding-right:5px; color:#67b600; font-family:'Petit Formal Script', cursive;; margin-bottom:-10px;}
+.capitalize003:first-letter{ font-size:44px; float:left; padding-right:5px; color:#67b600; font-family:'Petit Formal Script', cursive; margin-bottom:-10px;}
 
 .capitalize004{ color:#58585a;  margin:0 auto;}
-.capitalize004:first-letter{ font-size:30px; float:left; padding:6px; margin-right:5px; color:#fff; background:#67b600; font-family:'PetitFormal'; text-shadow: -1px -1px 0px #333;  }
+.capitalize004:first-letter{ font-size:30px; float:left; padding:6px; margin-right:5px; color:#fff; background:#67b600; font-family:'Petit Formal Script', cursive; text-shadow: -1px -1px 0px #333;  }
 
 /*subtitle*/
 .subtitle001{ font-family:'Petit Formal Script', cursive !important; line-height:50px; font-size:24px; !important; color:#000; border:#f2f2f2 solid; border-width:2px 0px 2px 0px; margin:20px 0;}
@@ -271,7 +296,7 @@ footer nav span{display:block; float:none; text-align:center; font-size:12px; }
 	header nav {float:right;}
 	header nav ul{ display:block;}
 	header nav ul li {display: inline-block;}
-	header nav ul li:hover ul {  opacity:1; top:47px; }
+	header nav ul li:hover  ul{  opacity:1; top:47px; }
 	header nav .selectnav{ display:none;}
 
 	.three-column > *{width:30% !important; float:left; margin-left:5%; margin-bottom:0px !important;}	.three-column > *:firs-child{margin-right:2% !important; }

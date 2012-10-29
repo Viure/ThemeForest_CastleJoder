@@ -96,15 +96,17 @@
                 </nav>
             </div>
         </header>
-        <div id="pagetitle">
-            <div  class="wrapper">
-                <!--title of page here-->
-                <!-- TemplateBeginEditable name="pagetitle" -->
-                    <h1>Page Title</h1>
-                    <span id="breadcrumb"><a href="">Section</a> | <a href="">Subsection</a></span>
-                <!-- TemplateEndEditable -->
+        <!-- TemplateBeginEditable name="pagetitle" -->
+            <div id="pagetitle">
+                <div  class="wrapper">
+                    <!--title of page here-->
+                    
+                        <h1>Page Title</h1>
+                        <span id="breadcrumb"><a href="">Section</a> | <a href="">Subsection</a></span>
+                    
+                </div>
             </div>
-        </div>
+        <!-- TemplateEndEditable -->
         <!-- TemplateBeginEditable name="content" -->
         <div id="content">
             <div  class="wrapper">

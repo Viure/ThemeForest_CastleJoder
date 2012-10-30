@@ -21,8 +21,40 @@ jQuery(document).ready(function($) {
 //  });	
 //	
 //});
+
+ /* ---------------------------------------------------------------------- */
+/*	Banner Slide   - Video BG & OneByOne
+/* ---------------------------------------------------------------------- */
+
+$(document).ready(function() {
+
+videoArray = new Array('Backdrop_Video','CorporateElegance','earth-zoom-in','Paper_Cutout_Backgrounds_Preview','Prev','Preview');
+videoArray.sort( randOrd );
+
+	$('#video-background').videoBG({
+		mp4:'video/' + videoArray[0] + '.mp4',
+		ogv:'video/' + videoArray[0] + '.ogv',
+		webm:'video/' + videoArray[0] + '.webm',
+		poster:'video/CorporateElegance.jpg',
+		scale:false,
+		zIndex:0
+	});
+
+	$('#banner').oneByOne({
+		className: 'oneByOne1',	             
+		easeType: 'random',
+		slideShow: true
+	});  
+
+
+});
+
+function randOrd(){
+return (Math.round(Math.random())-0.5); } 
+
 	
-	
+/* end Banner Slide   - Video BG & OneByOne */
+		
 	
 $(document).ready(function() {
     //Progres bar
@@ -78,8 +110,8 @@ var _gaq = _gaq || [];
 
 
  /* ---------------------------------------------------------------------- */
-	/*	MAP GOOGLE   - GMAP 3  ;-)
-	/* ---------------------------------------------------------------------- */
+/*	MAP GOOGLE   - GMAP 3  ;-)
+/* ---------------------------------------------------------------------- */
 
 	(function() {
 

@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/flexslider.css">
         
+        <link href="css/jquery.onebyone.css" rel="stylesheet" type="text/css">
+        <link href="css/example1.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">    
     </head>
     <body>
     	<!--[if lt IE 7]>
@@ -39,6 +42,51 @@
             </header>
 			
             <section class="flexslider">
+            
+            	
+                 <!-- One by One -->
+                    <div class="wrapper">
+                    <div id="banner">  				
+                            <div class="oneByOne_item">
+                                <img src="images/example1/item1/wordpress-256x256.png" class="wp1_3" alt=""></img>			            
+                                <img src="images/example1/item1/wordpress-128x128.png" class="wp1_2" alt=""></img>			    
+                                <img src="images/example1/item1/wordpress-64x64.png" class="wp1_1" alt=""></img>  			
+                                <span class="txt1"><a href="http://themeforest.net/user/sike">I'm WordPress</a></span>			
+                                <span class="txt2">Above is a hyperlink ;)</span>												
+                            </div>
+                            <div class="oneByOne_item">                                 	
+                                <img src="images/example1/mouse.jpg"  class="bigImage" ></img>
+                                <span class="slide2Txt1">A mouse</span>								
+                                <span class="slide2Txt2">Lorem ipsum dolor sit amet</span>											
+                                <span class="slide2Txt3">Deserunt mollit anim id est laborum</span>														
+                            </div>	
+                            
+                            <div class="oneByOne_item">
+                                <span class="wp1">Touch Screen</span>			
+                                <span class="wp2">Please Wipe Left or Right</span>															
+                                <img src="images/example1/item2/wordpress-64x64.png" class="wp1" alt=""></img>
+                                <img src="images/example1/item2/wordpress-128x128.png" class="wp2" alt=""></img>			
+                                <img src="images/example1/item2/wordpress-256x256.png" class="wp3" alt=""></img>
+                            </div>                                                                                              
+                    
+                            <div class="oneByOne_item">                                 	
+                                <img src="images/example1/bigimage.jpg"  class="bigImage" ></img>
+                                <span class="slide5Txt1">Support Big Image</span>								
+                                <span class="slide5Txt2">Unlimited Text block</span>											
+                            </div>	
+		
+						</div>    
+                    </div>
+                    
+                    <!-- Fin -->
+            
+            
+            	<div style="width:100%;height:500px" id="video-background">
+                	
+                   
+                    
+                </div>
+            
               <ul class="slides">
                 <li>
                 	<div class="slidercontent">aaa</div>
@@ -107,6 +155,7 @@
                     <li>
                       <img src="img/c008.jpg" />
                     </li>
+                 </ul>
                 </section>
           </div> 
         <div class="clear"></div>
@@ -118,14 +167,63 @@
             
             </div>
         </footer>
-           	
-		<script src="js/jquery-1.8.1.min.js"></script>
+         
+        <script src="js/jquery-1.8.1.min.js"></script>  			
+        <script src="js/jquery.videoBG.js"></script>
+        <script src="js/jquery.onebyone.min.js"></script>
         <script src="js/modernizr-2.6.1-respond-1.1.0.min.js"></script>
         <script src="js/jquery.flexslider-min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+			 $(document).ready(function() { 
+					
+					$('#banner').oneByOne({
+						className: 'oneByOne1',	             
+						easeType: 'random',
+						slideShow: true
+					});  
+					
+					
+				 });
+		</script>
+	<script>
+	
+			$(document).ready(function() {
+				/*$('dl').toggle();
+				$('h2').bind('click', function(event) {
+					event.preventDefault();
+					$(this).next('dl').slideToggle(500, function() {
+						$('.video-background').videobackground('resize');
+					});
+				});
+				$('body').prepend('<div class="video-background"></div>');*/
+				
+				/*$('.video-background').videobackground({
+					videoSource: [['video/big-buck-bunny.mp4', 'video/mp4'],
+						['video/big-buck-bunny.webm', 'video/webm'], 
+						['video/big-buck-bunny.ogv', 'video/ogg']], 
+					controlPosition: '#main',
+					poster: 'video/big-buck-bunny.jpg',
+					loadedCallback: function() {
+						$(this).videobackground('mute');
+					}
+				});*/
+				
+				
+					$('#video-background').videoBG({
+					mp4:'video/CorporateElegance.mp4',
+					ogv:'video/CorporateElegance.ogv',
+					webm:'video/CorporateElegance.webm',
+					poster:'video/CorporateElegance.jpg',
+					scale:true,
+					zIndex:0
+				});
 
 
-
+				
+			});
+	
+	</script>
     
 
 

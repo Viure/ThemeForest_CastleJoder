@@ -18,7 +18,7 @@
         <!--css-->
         <link rel="stylesheet" href="../css/normalize.min.css">
         <link rel="stylesheet" href="../css/flexslider.css">
-        <link rel="stylesheet" href="../css/main.css">      
+        <link rel="stylesheet" href="../css/main.css">           
     </head>
 
 <body>
@@ -97,7 +97,7 @@
             </div>
         </header>
         <!-- TemplateBeginEditable name="pagetitle" -->
-            <div id="pagetitle">
+            <div id="pagetitle"> 
                 <div  class="wrapper">
                     <!--title of page here-->
                     

@@ -3,24 +3,24 @@
 // When DOM is fully loaded
 jQuery(document).ready(function($) {
 
-// $(function(){//      SyntaxHighlighter.all();
-//    });
-//    $(window).load(function(){
-//      $('.flexslider').flexslider({
-//        animation: "slide",
-//        start: function(slider){
-//          $('body').removeClass('loading');
-//        }
-//      });
-//    
-// $('.flexslider2').flexslider({
-//    animation: "slide",
-//    animationLoop: false,
-//    itemWidth: 210,
-//    itemMargin: 5
-//  });	
-//	
-//});
+ $(function(){//      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    
+/* $('.flexslider2').flexslider({
+    animation: "slide",
+    animationLoop: false,
+    itemWidth: 210,
+    itemMargin: 5
+  });	*/
+	
+});
 
  /* ---------------------------------------------------------------------- */
 /*	Banner Slide   - Video BG & OneByOne
@@ -28,14 +28,15 @@ jQuery(document).ready(function($) {
 
 $(document).ready(function() {
 
+if( $('#video-background').length ) {
 //videoArray = new Array('Backdrop_Video','CorporateElegance','earth-zoom-in','Paper_Cutout_Backgrounds_Preview','Prev','Preview');
 //videoArray.sort( randOrd );
 
 	$('#video-background').videoBG({
-		mp4:'video/Backdrop_Video.mp4',
-		ogv:'video/Backdrop_Video.ogv',
-		webm:'video/Backdrop_Video.webm',
-		poster:'video/CorporateElegance.jpg',
+		mp4:'video/Particlerise_960px.mp4',
+		ogv:'video/Particlerise_960px.ogv',
+		webm:'video/Particlerise_960px.webm',
+		poster:'video/Particlerise.jpg',
 		scale:false,
 		zIndex:0
 	});
@@ -45,7 +46,7 @@ $(document).ready(function() {
 		easeType: 'random',
 		slideShow: true
 	});  
-
+}
 
 });
 

@@ -180,11 +180,15 @@
 			$(window).resize(function() {				
 				clearTimeout(resizeTimeout);
 				resizeTimeout = setTimeout(function() {	
-					var windowwidth = $(window).width();									
-					$('.videoBG_wrapper').css("width",windowwidth)						
-					$('.videoBG').width(windowwidth)					
-					$video.width(windowwidth)			
-					
+					var windowwidth = $(window).width();
+					var videocontentheigth = $('#video-content').height();									
+					$('.videoBG_wrapper').css("width",windowwidth);					
+					$('.videoBG').width(windowwidth)
+					$('.videoBG_wrapper').height(videocontentheigth);	
+					$('.videoBG').height(videocontentheigth);	
+								
+					$video.width(windowwidth)		
+					//$video.height(videocontentheigth)	
 				},100);	
 			});
 		}

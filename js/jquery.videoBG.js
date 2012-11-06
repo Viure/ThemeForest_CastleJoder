@@ -25,6 +25,9 @@
 		
 		var container = $(this);
 		
+		// get de children with media querys config if exist
+		options.mediadivs = container.children();
+		
 		// check if elements available otherwise it will cause issues
 		if (!container.length)
 			return;
@@ -148,6 +151,7 @@
 			.css('top',0)
 			.css('left',0)
 			.css('min-width','100%')
+			.css('width','100%')
 			.css('min-height','100%');
 		
 		if (options.autoplay) {
@@ -171,6 +175,18 @@
 				},100);	
 			});
 			$.fn.videoBG.setFullscreen($video);
+		}else{
+			var resizeTimeout;			
+			$(window).resize(function() {				
+				clearTimeout(resizeTimeout);
+				resizeTimeout = setTimeout(function() {	
+					var windowwidth = $(window).width();									
+					$('.videoBG_wrapper').css("width",windowwidth)						
+					$('.videoBG').width(windowwidth)					
+					$video.width(windowwidth)			
+					
+				},100);	
+			});
 		}
 			
 		
@@ -207,20 +223,47 @@
 		
 		
 		// if supports video
-		if ($.fn.videoBG.supportsVideo()) {
-
+		if ($.fn.videoBG.supportsVideo()) {			
+		
+			var mediavideos = options.mediadivs			
+			
 		  	// supports webm
 		  	if ($.fn.videoBG.supportType('webm')){
 		  		
 		  		// play webm
-		  		$video.attr('src',options.webm);
+				if(mediavideos.length==0){
+		  			$video.attr('src',options.webm);
+				}else{
+				
+					$.each(mediavideos, function(index) { 						
+						var $source = $('<source/>');
+						$source.attr('src',$(this).attr("data-video") + '.webm');						
+						$source.attr('type',$(this).attr("data-type")+ '/webm');						
+						$source.attr('media',$(this).attr("data-media"));
+						$video.append($source);
+					});					
+				}
+				
 		  	}
 		  	// supports mp4
 		  	else if ($.fn.videoBG.supportType('mp4')) {	  	
 		  		
 		  		// play mp4
-		  		$video.attr('src',options.mp4);
+		  		//$video.attr('src',options.mp4);
 		  		
+				if(mediavideos.length==0){
+		  			$video.attr('src',options.mp4);
+				}else{
+				
+					$.each(mediavideos, function(index) { 						
+						var $source = $('<source/>');
+						$source.attr('src',$(this).attr("data-video") + '.mp4');						
+						$source.attr('type',$(this).attr("data-type")+ '/mp4');						
+						$source.attr('media',$(this).attr("data-media"));
+						$video.append($source);
+					});					
+				}
+				
 		  	//	$video.html('<source src="'.options.mp4.'" />');
 		  		
 		  	}
@@ -228,7 +271,20 @@
 		  	else {
 		  		
 		  		// play ogv
-		  		$video.attr('src',options.ogv);
+		  		if(mediavideos.length==0){
+		  			$video.attr('src',options.ogv);
+				}else{
+				
+					$.each(mediavideos, function(index) { 						
+						var $source = $('<source/>');
+						$source.attr('src',$(this).attr("data-video") + '.ogv');						
+						$source.attr('type',$(this).attr("data-type")+ '/ogv');						
+						$source.attr('media',$(this).attr("data-media"));
+						$video.append($source);
+					});					
+				}	
+				
+				
 		  	}
 	  	
 	  	}

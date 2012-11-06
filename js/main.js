@@ -28,13 +28,13 @@ jQuery(document).ready(function($) {
 
 $(document).ready(function() {
 
-videoArray = new Array('Backdrop_Video','CorporateElegance','earth-zoom-in','Paper_Cutout_Backgrounds_Preview','Prev','Preview');
-videoArray.sort( randOrd );
+//videoArray = new Array('Backdrop_Video','CorporateElegance','earth-zoom-in','Paper_Cutout_Backgrounds_Preview','Prev','Preview');
+//videoArray.sort( randOrd );
 
 	$('#video-background').videoBG({
-		mp4:'video/' + videoArray[0] + '.mp4',
-		ogv:'video/' + videoArray[0] + '.ogv',
-		webm:'video/' + videoArray[0] + '.webm',
+		mp4:'video/Backdrop_Video.mp4',
+		ogv:'video/Backdrop_Video.ogv',
+		webm:'video/Backdrop_Video.webm',
 		poster:'video/CorporateElegance.jpg',
 		scale:false,
 		zIndex:0

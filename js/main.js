@@ -60,6 +60,94 @@ return (Math.round(Math.random())-0.5); }
 
 	
 /* end Banner Slide   - Video BG & OneByOne */
+
+
+
+ /* ---------------------------------------------------------------------- */
+/*	Windy Slide   
+/* ---------------------------------------------------------------------- */
+
+$(function() {
+				
+				var b = {
+							rotateX : { min : 40 , max : 90 },
+							rotateY : { min : -15 , max : 45 },
+							rotateZ : { min : -10 , max : 10 },
+							translateX : { min : -400 , max : 400 },
+							translateY : { min : -400 , max : 400 },
+							translateZ : { min : 350 , max : 550 }
+						};
+				
+				var $el = $( '#wi-el1' ),
+					windy1 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;
+					
+				var $el = $( '#wi-el2' ),
+					windy2 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;
+					
+				var $el = $( '#wi-el3' ),
+					windy3 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;
+					
+					
+				var $el = $( '#wi-el4' ),
+					windy4 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;			
+
+				$( '#nav-prev' ).on( 'mousedown', function( event ) {
+
+					allownavprev = true;
+					navprev();
+				
+				} ).on( 'mouseup mouseleave', function( event ) {
+
+					allownavprev = false;
+				
+				} );
+
+				$( '#nav-next' ).on( 'mousedown', function( event ) {
+
+					allownavnext = true;
+					navnext();
+				
+				} ).on( 'mouseup mouseleave', function( event ) {
+
+					allownavnext = false;
+				
+				} );
+
+				function navnext() {
+					if( allownavnext ) {
+						windy1.next();
+						windy2.next();
+						windy3.next();
+						windy4.next();
+						setTimeout( function() {	
+							navnext();
+						}, 150 );
+					}
+				}
+
+				function navprev() {
+					if( allownavprev ) {
+						windy1.prev();
+						windy2.prev();
+						windy3.prev();
+						windy4.prev();
+						setTimeout( function() {	
+							navprev();
+						}, 150 );
+					}
+				}
+
+			});
+
+/* end Windy Slide    */
 		
 	
 $(document).ready(function() {

@@ -175,7 +175,7 @@
 				},100);	
 			});
 			$.fn.videoBG.setFullscreen($video);
-		}else{
+		}else if (options.adaptedfullscreen) {
 			var resizeTimeout;			
 			$(window).resize(function() {				
 				clearTimeout(resizeTimeout);
@@ -188,9 +188,11 @@
 					$('.videoBG').height(videocontentheigth);	
 								
 					$video.width(windowwidth)		
-					//$video.height(videocontentheigth)	
+					
 				},100);	
 			});
+		}else{
+			//doing nothing
 		}
 			
 		

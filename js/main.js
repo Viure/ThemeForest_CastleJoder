@@ -43,6 +43,7 @@ if( $('#video-background').length ) {
 		webm:'video/Particlerise_960px.webm',
 		poster:'video/Particlerise.jpg',
 		scale:false,
+		adaptedfullscreen:true,
 		zIndex:0
 	});
 

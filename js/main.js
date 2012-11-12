@@ -5,13 +5,18 @@ jQuery(document).ready(function($) {
 
  $(function(){//      SyntaxHighlighter.all();
     });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
+	
+	
+$(document).ready(function() {
+     
+	 if( $('.flexslider').length ) {
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}		
+			});
+	}		
     
 /* $('.flexslider2').flexslider({
     animation: "slide",

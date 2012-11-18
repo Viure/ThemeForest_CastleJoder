@@ -1,133 +1,361 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+
+<html><!-- InstanceBegin template="/Templates/Public.dwt" codeOutsideHTMLIsLocked="false" -->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <!-- InstanceBeginEditable name="doctitle" -->
+            <title></title>
+            <meta name="description" content="">
+            <meta name="keywords" content="">
+            <meta name="viewport" content="width=device-width">            
+            <link rel="stylesheet" href="css/animate.css"> 
+            <link rel="stylesheet" type="text/css" href="css/jquery.onebyone.css">
+            <link rel="stylesheet" type="text/css" href="css/windy.css">
+        <!-- InstanceEndEditable -->
+        <!--Custom fonts-->
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+        <!--shortcut icon-->
+        <link rel="shortcut icon" href="favicon.ico">
+        <!--css-->
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/flexslider.css">
-        
+        <link rel="stylesheet" href="css/main.css">           
     </head>
-    <body>
-    	<!--[if lt IE 7]>
-            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
+
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
             <header>
-                <div class="wrapper">
-                    <a href="">
-                        <img id="logo" src="css/img/logo.png"/>
-                    </a>
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Prices</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="clear"></div>
-            </header>
-			
-            <section class="flexslider">
-              <ul class="slides">
-                <li>
-                	<div class="slidercontent">aaa</div>
-                	<img src="img/Slider/a001.jpg" />
-                </li>
-                <li>
-                	<img src="img/Slider/a002.jpg" />
-                </li>
-                <li>
-                	<img src="img/Slider/a003.jpg" />
-                </li>
-                <li>
-                	<img src="img/Slider/a004.jpg" />
-                </li>
-              </ul>
-            </section>
-			<div class="wrapper">
-                <section class="four-column">
-                    <article>
-                    	<img src="img/b001.jpg"/>
-                        <h2>Lorem ipsum dolor</h2>
-                        Lorem ipsum dolor sit amet, consectetur  elit. Duis eget massa  ante sit amet eget sapien. 
-                    </article>
-                    <article>
-                    	<img src="img/b002.jpg"/>
-                        <h2>Quisque aliquam mauris</h2>
-                        Cras eget pulvinar justo. Quisque aliquam mauris ut nisi sollicitudin ut dictum velit facilisis.
-                    </article>
-                    <article>
-                    	<img src="img/b003.jpg"/>
-                        <h2>Morbi eu metus non erat </h2>
-                        Etiam aliquam pulvinar magna nec elementum. Quisque semper venenatis tristique.
-                    </article>
-                    <article>
-                    	<img src="img/b004.jpg"/>
-                        <h2>Donec egestas lobortis</h2>
-                         Nullam eros ante, pretium in euismod quis, laoreet quis lacus. Donec  lobortis feugiat. 
-                    </article>
-                </section>
-          	<div class="clear"></div>
+                <div class="wrapper clearfix">                    
+                <a href="index.html">
+                    <!--insert here your logotype-->
+                    <img id="logo" src="css/img/logo.png"/>
+                </a>
+                <nav>
+                    <!--Secctions menu for phone-->
+                    <select class="selectnav">
+                        <option value="../index.html">Home</option>
+                        <option value="../index.html"> &&rarr; Home Slide 1</option>                        	
+                        <option value="../index.html"> &rarr; Home Slide 2</option>
+                        <option value="../index.html"> &rarr; Home Video</option>
+                        <option value="../index.html">Features</option>
+                        <option value="../columns.html"> &rarr; Columns</option>
+                        <option value="../404-1.html"> &rarr; 404 page</option>
+                        <option value="../controls.html"> &rarr; Controls</option>
+                        <option value="../aboutus.html">About Us</option>
+                        <option value="../Team.html">Team</option>
+                        <option value="../pricing.html">Prices</option>
+                        <option value="../portfolio4columns.html">Portfolio</option>
+                        <option value="../portfolioindividual.html"> &rarr; Individual</option>
+                        <option value="../portfolio1columns.html"> &rarr; 2 Columns</option>
+                        <option value="../portfolio2columns.html"> &rarr; 3 Columns</option>
+                        <option value="../portfolio3columns.html"> &rarr; 4 Columns</option>
+                        <option value="../portfolio4columns.html"> &rarr; Widgets</option>
+                        <option value="../portfoliovideos.html"> &rarr; Videos</option>
+                        <option value="../contact.html">Contact</option>
+                    </select>
+                    <ul>
+                        <!--Secctions menu for tab and pc-->
+                        <li><a href="index.html">Home</a>
+                            <ul>
+                                <li><a href="#">Home Slide 1</a></li>                                	
+                                <li><a href="#">Home Slide 2</a></li>
+                                <li><a href="#">Home Video</a></li>
+                                <li><a href="#">Third level menu</a>
+                                    <ul>
+                                        <li><a href="#">Subsection 1</a></li>
+                                        <li><a href="#">Subsection 2</a></li>
+                                        <li><a href="#">Subsection 3</a></li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="#">Features</a>
+                            <ul>
+                                <li><a href="columns.html">Columns</a></li>
+                                <li><a href="404.html">404 page</a></li>
+                                <li><a href="controls.html">Controls</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="pricing.html">Prices</a></li>
+                        <li><a href="#">Portfolio</a>
+                            <ul>
+                                <li><a href="portfolioindividual">Individual</a></li>
+                                <li><a href="portfolio2columns.html">2 Columns</a></li>
+                                <li><a href="portfolio3columns.html">3 Columns</a></li>
+                                <li><a href="portfolio4columns.html">4 Columns</a></li>
+                                <li><a href="portfoliowidgets.html">Widgets</a></li>
+                                <li><a href="portfoliovideos.html">Videos</a></li>
+                            </ul>                            
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- InstanceBeginEditable name="pagetitle" -->
+           <div  class="wrapper">       
+                  <section id="banner"> 
+                  		<div class="oneByOne_item">
+                        	<img src="img/ordenador.png" class="wp1_1" alt="" />
+                            <img src="img/tablet.png" class="wp1_2" alt="" />	
+                            <img src="img/movil.png" class="wp1_3" alt="" />		
+                             <span class="txt1">Keep it simple</span>			
+                             <span class="txt2">Minimal Well Design</span>
+                             <span class="txt3">Well Document</span>		            
+                  		</div>
+                        <div class="oneByOne_item">
+                        	<img src="img/ordenador.png" class="wp1_1" alt="" />
+                            <img src="img/tablet.png" class="wp1_2" alt="" />	
+                            <img src="img/movil.png" class="wp1_3" alt="" />	
+                             <span class="txt1">Mobile people</span>			
+                             <span class="txt2">Responsive Design</span>
+                             	            
+                  		</div>
+                        <div class="oneByOne_item">
+                        	<img src="img/ordenador.png" class="wp1_1" alt="" />
+                            <img src="img/tablet.png" class="wp1_2" alt="" />	
+                            <img src="img/movil.png" class="wp1_3" alt="" />	
+                             <span class="txt1">Welcolme to future</span>			
+                             <span class="txt2">Html5 & Css3</span>
+                             <span class="txt3">Background Video</span>		            
+                  		</div>
+                        <div class="oneByOne_item">
+                        	<img src="img/ordenador.png" class="wp1_1" alt="" />
+                            <img src="img/tablet.png" class="wp1_2" alt="" />	
+                            <img src="img/movil.png" class="wp1_3" alt="" />	
+                             <span class="txt1">Ninja</span>			
+                             <span class="txt2">Top Plugins</span>
+                             <span class="txt3">Customizable</span>		            
+                  		</div>
+                  </section>
+                  
           </div>
-          <div class="wrapper">
-          		<section class="flexslider2">
-                 <ul class="slides">
-                    <li>
-                      <img src="img/c001.jpg" />
-                    </li>
-                    <li>
-                      <img src="img/c002.jpg" />
-                    </li>
-                    <li>
-                      <img src="img/c003.jpg" />
-                    </li>
-                    <li>
-                      <img src="img/c004.jpg" />
-                    </li>
-                    <li>
-                      <img src="img/c005.jpg" />
-                    </li>
-                    <li>
-                      <img src="img/c006.jpg" />
-                    </li>
-                    <li>
-                      <img src="img/c007.jpg" />
-                    </li>
-                    <li>
-                      <img src="img/c008.jpg" />
-                    </li>
+          <section id="video-content2" class="wrapper">
+              <div id="video-background">          	
+                <div data-video="video/Particlerise_960px" data-type="video" data-media="only screen and (min-width: 960px)"></div>
+                <div data-video="video/Particlerise_960px" data-type="video" data-media="only screen and (min-width: 650px)"></div>
+               
+              </div>
+          </section>          
+                <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="content" -->
+        <section id="content">
+        	<div id="content-actions" class="clearfix">
+        		<div class="wrapper">
+                	<section id="service-buttons" class="four-column  clearfix">
+                    
+                    	<article>
+                        	<div class="item-shape">
+                            	<img src="img/icon1.png" width="130" height="130">
+                            	<!--<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="130" width="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask_0"><image height="130" width="130" y="0" x="0" xlink:href="http://www.cmssquirrel.com/knowhow/wp-content/themes/knowhow/layout/images/mask_cross.jpg"/></mask></defs><image height="130" width="130" y="0" x="0" mask="url(#mask_0)" xlink:href="img/icon1.png"/></svg>-->
+                            </div>
+                            <h1 class="subtitle001">Donwload</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet mauris mi, eget pharetra 
+Fusce sed erat sem. Morbi quis nibh nunc.</p>
+                        </article>
+                        <article>
+                        	<div class="item-shape">
+                            	<img src="img/icon2.png" width="130" height="130">
+                            </div>
+                            <h1 class="subtitle001">Mailing</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet mauris mi, eget pharetra 
+Fusce sed erat sem. Morbi quis nibh nunc.</p>
+                        </article>
+                        <article>
+                        	<div class="item-shape">
+                            <img src="img/icon3.png" width="130" height="130">
+                            </div>
+                            <h1 class="subtitle001">Recycle</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet mauris mi, eget pharetra 
+Fusce sed erat sem. Morbi quis nibh nunc.</p>
+                        </article>
+                        <article>
+                        	<div class="item-shape">
+                            <img src="img/icon4.png" width="130" height="130">
+                            </div>
+                            <h1 class="subtitle001">Paper bin</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet mauris mi, eget pharetra 
+Fusce sed erat sem. Morbi quis nibh nunc.</p>
+                        </article>
+                    
+                    </section>
+                </div>
+            </div>
+            
+            
+            
+            <div  class="wrapper">
+				<section id="projects" class="two-column clearfix">
+                		<article>
+                        	<h3>DOLORAMET</h3>
+                            <img src="img/article1.jpg" alt="project article">
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue tincidunt eleifend. Vestibulum at neque ante, sit amet sagittis purus. Quisque suscipit odio sit amet nunc pellentesque blandit. Nullam placerat semper porta. Aenean faucibus libero sapien</p>
+                        </article>
+                        <article>
+                        	<h3>DOLORAMET</h3>
+                            <img src="img/article1.jpg" alt="project article">
+                            <p>Tortor odio imperdiet nulla, iaculis</p>
+                                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue tincidunt eleifend. Vestibulum at neque ante, sit amet sagittis purus. Quisque suscipit odio sit amet nunc pellentesque blandit. Nullam placerat semper porta. Aenean faucibus libero sapien</p>
+                        </article>
                 </section>
-          </div> 
-        <div class="clear"></div>
-        
+                
+                
+                <section id="projects-slider" class="clearfix">
+                	<div id="projects-slider-colum"  class="four-column clearfix">
+                		<article>
+                        	<ul id="wi-el1" class="wi-el wi-container">
+    								<li>
+        								<img src="img/c001.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c002.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c003.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c004.jpg" alt="image1"/>
+                                    </li>
+                             </ul>
+                                  
+                        </article>
+                        <article>
+                        	<ul id="wi-el2" class="wi-el wi-container">
+    								<li>
+        								<img src="img/c001.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c002.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c003.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c004.jpg" alt="image1"/>
+                                    </li>
+                             </ul>
+                        </article>
+                        <article>
+                        	<ul id="wi-el3" class="wi-el wi-container">
+    								<li>
+        								<img src="img/c001.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c002.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c003.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c004.jpg" alt="image1"/>
+                                    </li>
+                             </ul>
+                        </article>
+                        <article>
+                        	<ul id="wi-el4" class="wi-el wi-container">
+    								<li>
+        								<img src="img/c001.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c002.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c003.jpg" alt="image1"/>
+                                    </li>
+                                    <li>
+        								<img src="img/c004.jpg" alt="image1"/>
+                                    </li>
+                             </ul>
+                        </article>
+                      </div>
+                      <div id="projects-slider-title" class="slogan001">
+                      	<h1>Esnt, sunt in culpa qui officia deserun Duis aute irure </h1>
+                        <h2>Esnt, sunt in culpa qui officia deserun Duis aute irure  </h2>
+                      </div>  
+                        <nav id="projects-slider-navigation">
+                                <span id="nav-prev">prev</span>
+                                <span id="nav-next">next</span>
+                         </nav>  
+                        
+                </section>
+            </div>
+            
+        </section>
+		<!-- InstanceEndEditable -->
+            
         <footer>
         	<div class="wrapper">
-        	
-            
-            
+        		<div class="four-column clearfix">
+                	<div>
+                		<img src="css/img/logominifooter.png"/>
+                        <div class="clear"></div>
+                        <p><strong>Adress:</strong> 124 Century Street, 1st Floor Empire Building, State 25138
+                        <p><strong>Telephone:</strong> 555 555 555
+                        <p><strong>Fax:</strong> 555 555 555
+                        <div class="spacer"></div>
+                        <h3>FOLLOW <span>US ON</span></h3>
+                        <a href=""><img src="css/icos/socialblog.png" /></a>
+                        <a href=""><img src="css/icos/socialfacebook.png" /></a>
+                        <a href=""><img src="css/icos/socialtweeter.png" /></a>
+                        <a href=""><img src="css/icos/socialrss.png" /></a>
+                        <a href=""><img src="css/icos/socialflickr.png" /></a>
+                    </div>
+                	<div>
+                		<h3>RECENT <span>POSTS</span></h3>
+                        <ul class="footerli">
+                        	<li><a href=""> &gt; Return non et re acu graviada.</a></li>
+                        	<li><a href=""> &gt; Nuc et magna yoknisi.</a></li>
+            				<li><a href=""> &gt; Rutrum erat non re arcu gravida.</a></li>
+                            <li><a href=""> &gt; Nunc rt magna yoknisi.</a></li>
+                            <li><a href=""> &gt; Estellerus mithrill magna yoknisi.</a></li>
+                		</ul>
+                    </div>
+                	<div class="clear"></div>
+                    <div>
+                		<h3>FLICKR <span>PHOTOS</span></h3>
+
+
+                    </div>                    
+                	<div>
+                		<h3>RECENT <span>TWEETS</span></h3>
+
+                    </div>
+            	</div>
             </div>
+            <nav>
+                <div class="wrapper">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <span>Copyright 2012 ? Cubismo HTML/CSS theme by J3D. All rights reserved. </span>
+                </div>
+            </nav>
         </footer>
-           	
-		<script src="js/jquery-1.8.1.min.js"></script>
-        <script src="js/modernizr-2.6.1-respond-1.1.0.min.js"></script>
-        <script src="js/jquery.flexslider-min.js"></script>
-        <script src="js/main.js"></script>
 
-
-
-    
-
-
-    </body>
-</html>
+        <!-- InstanceBeginEditable name="jslibraries" -->
+			<script src="js/jquery-1.8.1.min.js"></script>
+            <script src="js/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+            <script src="js/jquery.videoBG.js"></script>
+        	<script src="js/jquery.onebyone.min.js"></script>
+            <script src="js/jquery.windy.js"></script>
+            <script src="js/main.js"></script>
+            
+            
+          
+            
+		<!-- InstanceEndEditable -->
+            
+	</body>
+<!-- InstanceEnd --></html>

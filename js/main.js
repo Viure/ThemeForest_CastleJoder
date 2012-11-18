@@ -3,26 +3,185 @@
 // When DOM is fully loaded
 jQuery(document).ready(function($) {
 
-// $(function(){//      SyntaxHighlighter.all();
-//    });
-//    $(window).load(function(){
-//      $('.flexslider').flexslider({
-//        animation: "slide",
-//        start: function(slider){
-//          $('body').removeClass('loading');
-//        }
-//      });
-//    
-// $('.flexslider2').flexslider({
-//    animation: "slide",
-//    animationLoop: false,
-//    itemWidth: 210,
-//    itemMargin: 5
-//  });	
-//	
-//});
+ $(function(){//      SyntaxHighlighter.all();
+    });
 	
 	
+$(document).ready(function() {
+     
+	 if( $('.flexslider').length ) {
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}		
+			});
+	}		
+    
+/* $('.flexslider2').flexslider({
+    animation: "slide",
+    animationLoop: false,
+    itemWidth: 210,
+    itemMargin: 5
+  });	*/
+	
+});
+
+
+ /* ---------------------------------------------------------------------- */
+/*	Banner Slide   - Video BG & OneByOne
+/* ---------------------------------------------------------------------- */
+
+$(document).ready(function() {
+
+if( $('#video-background').length ) {
+//videoArray = new Array('Backdrop_Video','CorporateElegance','earth-zoom-in','Paper_Cutout_Backgrounds_Preview','Prev','Preview');
+//videoArray.sort( randOrd );
+
+	$('#video-background').videoBG({
+		mp4:'video/Particlerise_960px.mp4',
+		ogv:'video/Particlerise_960px.ogv',
+		webm:'video/Particlerise_960px.webm',
+		poster:'video/Particlerise.jpg',
+		scale:false,
+		adaptedfullscreen:true,
+		zIndex:0
+	});
+
+	$('#banner').oneByOne({
+		className: 'oneByOne1',	             
+		easeType: 'random',
+		slideShow: true
+	});  
+}
+
+
+});
+
+function randOrd(){
+return (Math.round(Math.random())-0.5); } 
+
+	
+/* end Banner Slide   - Video BG & OneByOne */
+
+if(($.superbox)!=undefined){
+//jquery superbox
+$.superbox.settings = {
+	boxId: "superbox", // Id attribute of the "superbox" element
+	boxClasses: "", // Class of the "superbox" element
+	overlayOpacity: .8, // Background opaqueness
+	boxWidth: "600", // Default width of the box
+	boxHeight: "400", // Default height of the box
+	loadTxt: "", // Loading text
+	closeTxt: "<img src='css/icos/unchecked.png' />", // "Close" button text
+	prevTxt: "Previous", // "Previous" button text
+	nextTxt: "Next" // "Next" button text
+};
+
+
+$(function(){
+	$.superbox();
+})
+}
+
+ /* ---------------------------------------------------------------------- */
+/*	Windy Slide   
+/* ---------------------------------------------------------------------- */
+
+$(function() {
+	if($.windy!=undefined){			
+				var b = {
+							rotateX : { min : 40 , max : 90 },
+							rotateY : { min : -15 , max : 45 },
+							rotateZ : { min : -10 , max : 10 },
+							translateX : { min : -400 , max : 400 },
+							translateY : { min : -400 , max : 400 },
+							translateZ : { min : 350 , max : 550 }
+						};
+				
+				var $el = $( '#wi-el1' ),
+					windy1 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;
+					
+				var $el = $( '#wi-el2' ),
+					windy2 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;
+					
+				var $el = $( '#wi-el3' ),
+					windy3 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;
+					
+					
+				var $el = $( '#wi-el4' ),
+					windy4 = $el.windy(b),
+					allownavnext = false,
+					allownavprev = false;			
+
+				$( '#nav-prev' ).on( 'mousedown', function( event ) {
+
+					allownavprev = true;
+					navprev();
+				
+				} ).on( 'mouseup mouseleave', function( event ) {
+
+					allownavprev = false;
+				
+				} );
+
+				$( '#nav-next' ).on( 'mousedown', function( event ) {
+
+					allownavnext = true;
+					navnext();
+				
+				} ).on( 'mouseup mouseleave', function( event ) {
+
+					allownavnext = false;
+				
+				} );
+
+				function navnext() {
+					if( allownavnext ) {
+						setTimeout( function() {
+							windy1.next();
+							}, 150 );
+
+						setTimeout( function() {
+							windy2.next();
+							}, 250 );
+
+						setTimeout( function() {
+							windy3.next();
+							}, 350 );
+
+						setTimeout( function() {
+							windy4.next();
+							}, 450 );
+						
+						setTimeout( function() {	
+							navnext();
+						}, 150 );
+					}
+				}
+
+				function navprev() {
+					if( allownavprev ) {
+						windy1.prev();
+						windy2.prev();
+						windy3.prev();
+						windy4.prev();
+						setTimeout( function() {	
+							navprev();
+						}, 150 );
+					}
+				}
+		}
+});
+
+/* end Windy Slide    */
+		
 	
 $(document).ready(function() {
     //Progres bar
@@ -59,21 +218,6 @@ $(document).ready(function() {
 		}
 	
 	})
-	//jquery superbox
-	$.superbox.settings = {
-		boxId: "superbox", // Id attribute of the "superbox" element
-		boxClasses: "", // Class of the "superbox" element
-		overlayOpacity: .8, // Background opaqueness
-		boxWidth: "600", // Default width of the box
-		boxHeight: "400", // Default height of the box
-		loadTxt: "", // Loading text
-		closeTxt: "<img src='css/icos/unchecked.png' />", // "Close" button text
-		prevTxt: "Previous", // "Previous" button text
-		nextTxt: "Next" // "Next" button text
-	};
-	$(function(){
-		$.superbox();
-	});
 	
 	
 });	
@@ -93,8 +237,8 @@ var _gaq = _gaq || [];
 
 
  /* ---------------------------------------------------------------------- */
-	/*	MAP GOOGLE   - GMAP 3  ;-)
-	/* ---------------------------------------------------------------------- */
+/*	MAP GOOGLE   - GMAP 3  ;-)
+/* ---------------------------------------------------------------------- */
 
 	(function() {
 
@@ -138,7 +282,7 @@ var _gaq = _gaq || [];
 			
 					$map.gmap3(
 						{ action: 'addMarker',
-						address: "Avd, Pirineos 15, Huesca, EspaÃ±a",
+						address: "Avd, Pirineos 15, Huesca, España",
 							marker:{
 								options:{
 								icon:'marker.png' //Path to the image

@@ -96,6 +96,8 @@
 		var windowWidth = $(window).width(),
 			windowHeight = $(window).height();
 
+alert('sda');
+
 		$el.css('min-height',0).css('min-width',0);
 		$el.parent().width(windowWidth).height(windowHeight);
 		// if by width 
@@ -179,7 +181,7 @@
 			var resizeTimeout;			
 			$(window).resize(function() {				
 				clearTimeout(resizeTimeout);
-				resizeTimeout = setTimeout(function() {	
+				resizeTimeout = setTimeout(function() {					
 					var windowwidth = $(window).width();
 					var videocontentheigth = $('#video-content').height();									
 					$('.videoBG_wrapper').css("width",windowwidth);					

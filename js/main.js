@@ -124,10 +124,22 @@ $(function() {
 
 				function navnext() {
 					if( allownavnext ) {
-						windy1.next();
-						windy2.next();
-						windy3.next();
-						windy4.next();
+						setTimeout( function() {
+							windy1.next();
+							}, 150 );
+
+						setTimeout( function() {
+							windy2.next();
+							}, 250 );
+
+						setTimeout( function() {
+							windy3.next();
+							}, 350 );
+
+						setTimeout( function() {
+							windy4.next();
+							}, 450 );
+						
 						setTimeout( function() {	
 							navnext();
 						}, 150 );

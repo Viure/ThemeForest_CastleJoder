@@ -30,20 +30,20 @@
 	cursor: pointer;  
 }            
 .arrowButton .prevArrow{
-	background: url(../images/assets/prev.png) no-repeat; 
-	width: 40px;
-	height: 80px;      
+	background: url(img/bg_direction_slider.png) no-repeat 0 0; 
+	width: 39px;
+	height: 34px;      
 	position: absolute;
 	top: 170px;	 
-	left: 12px;        
+	left: 0px;        
 } 
 .arrowButton .nextArrow{                 
-	background: url(../images/assets/next.png) no-repeat;
-	width: 40px;
-	height: 80px;
+	background: url(img/bg_direction_slider.png) no-repeat  -39px 0; 
+	width: 39px;
+	height: 34px;
 	position: absolute;
 	top: 170px;
-	right: 12px;	          
+	right: 0px;	          
 }   
 
 .animate0{

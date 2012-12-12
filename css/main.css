@@ -310,9 +310,9 @@ h4.style001{ color:#67b600;   line-height:18px;}
 .alert-ms-2 p{  background-image:url(icos/alertms.png);}
 
 
-*Home ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Home ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#content-actions{background-color:#f2f2f2;padding:0;margin:0;height:448px;}
+#content-actions{background-color:#f2f2f2;padding:0;margin: -30px 0 30px;;height:498px;}
 
 #service-buttons > *{text-align:center;padding:20px 0 20px 0;}
 #service-buttons > * p{text-align:justify;padding:0 20px}
@@ -328,6 +328,7 @@ h4.style001{ color:#67b600;   line-height:18px;}
 
 #projects-slider{margin-top:50px}
 #projects-slider #projects-slider-title{position:absolute;width:960px;margin-top:-100px;z-index:99999}
+#projects-slider #projects-slider-title h1{font-size:24px;font-weight:bold}
 #projects-slider #projects-slider-navigation{position:absolute;width:960px;z-index:99999;margin-top:-200px;}
 #projects-slider #projects-slider-navigation #nav-prev{float:left}
 #projects-slider #projects-slider-navigation #nav-next{float:right}
@@ -460,7 +461,7 @@ h4.style001{ color:#67b600;   line-height:18px;}
 #portfolio2columns{ }
 #portfolio2columns .item{ width:470px; overflow:hidden; height:240px; }
 #portfolio2columns .item img{ position:absolute;}
-#portfolio2columns .item a{ width:100%; height:240px; background: url(icos/portfoliozoom.png) no-repeat center rgba(103,182,0,0.5); display:block; position:absolute; margin-top:185px;}
+#portfolio2columns .item a{ width:470px; height:240px; background: url(icos/portfoliozoom.png) no-repeat center rgba(103,182,0,0.5); display:block; position:absolute; margin-top:185px;}
 #portfolio2columns .item:hover a{ margin:0;}
 #portfolio2columns .item .iteminfo{ color:#FFF; background:rgba(0,0,0,0.8); z-index:20; position:relative;  padding:5px 8px; }
 #portfolio2columns .item .iteminfo h2{ font-size:20px;}

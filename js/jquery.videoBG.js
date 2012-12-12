@@ -96,8 +96,6 @@
 		var windowWidth = $(window).width(),
 			windowHeight = $(window).height();
 
-alert('sda');
-
 		$el.css('min-height',0).css('min-width',0);
 		$el.parent().width(windowWidth).height(windowHeight);
 		// if by width 

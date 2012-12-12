@@ -15,7 +15,7 @@ $(document).ready(function() {
 			start: function(slider){
 			  $('body').removeClass('loading');
 			}		
-			});
+		});
 	}		
     
 /* $('.flexslider2').flexslider({
@@ -35,23 +35,24 @@ $(document).ready(function() {
 $(document).ready(function() {
 
 if( $('#video-background').length ) {
-//videoArray = new Array('Backdrop_Video','CorporateElegance','earth-zoom-in','Paper_Cutout_Backgrounds_Preview','Prev','Preview');
-//videoArray.sort( randOrd );
 
+
+	
 	$('#video-background').videoBG({
 		mp4:'video/Particlerise_960px.mp4',
 		ogv:'video/Particlerise_960px.ogv',
 		webm:'video/Particlerise_960px.webm',
 		poster:'video/Particlerise.jpg',
 		scale:false,
-		adaptedfullscreen:true,
+		adaptedfullscreen:$('#video-background').attr('data-adaptedfullscreen'),
 		zIndex:0
 	});
 
 	$('#banner').oneByOne({
 		className: 'oneByOne1',	             
 		easeType: 'random',
-		slideShow: true
+		slideShow: true,
+		showArrow: true
 	});  
 }
 
@@ -89,7 +90,8 @@ $(function(){
 /* ---------------------------------------------------------------------- */
 
 $(function() {
-	if($.windy!=undefined){			
+	if($(".wi-el")!=undefined){	
+	
 				var b = {
 							rotateX : { min : 40 , max : 90 },
 							rotateY : { min : -15 , max : 45 },
